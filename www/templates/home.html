@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title> Beacon </title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+<ion-view class="home-view">
+  <ion-nav-title>
+    <span>Facebook Login </span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="row">
+      <div class="col">
+        <h3 class="welcome-message">Hi {{user.name}}</h3>
+        <p class="welcome-message">You have logged in with Facebook</p>
+        <img ng-src="{{user.picture}}">
+        <a class="button button-assertive button-block button-outline" ng-click="showLogOutMenu()">
+          Log Out
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+</html>

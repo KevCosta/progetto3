@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title> Wifi </title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/stylewifi.css" rel="stylesheet">
+  </head>
+
+<ion-view class="beaconreader-view">
+        <ion-nav-title>
+            <span> Wifi </span>
+        </ion-nav-title>
+
+<ion-content>
+      <div class="row">
+        <div clas="col">
+            Please turn on the Wifi!
+        </div>
+      </div>
+      <div class="row">
+
+
+                <div class="col">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Destinazione
+                            <select ng-model="settings.stanza">
+                              <option selected>Aula caffè</option>
+                              <option>Aula L</option>
+                              <option>Aula M</option>
+
+                              <option>163B</option>
+                              <option>164A</option>
+                              <option>164B</option>
+                              <option>169</option>
+                              <option>170</option>
+                              <option>171</option>
+                              <option>Altair1</option>
+                              <option>Altair2</option>
+
+                              <option>Belussi</option>
+                              <option>Bicego</option>
+                              <option>Bombieri</option>
+                              <option>Bonacina</option>
+                              <option>Carra</option>
+                              <option>Castellani </option>
+                              <option>Cicalese</option>
+                              <option>Combi</option>
+                              <option>Cristani Marco</option>
+                              <option>Cristani Matteo</option>
+                              <option>Daducci</option> 
+                              <option>Dalla Preda</option>
+                              <option>Di Pierro</option>
+                              <option>Farinelli</option>
+                              <option>Ferro</option>
+                              <option>Fiorini</option>
+                              <option>Franco</option>
+                              <option>Fummi</option>
+                              <option>Giacobazzi</option>
+                              <option>Giachetti</option>
+                              <option>Giugno</option>
+                              <option>Liptak</option> 
+                              <option>Manca</option>
+                              <option>Masini</option>
+                              <option>Mastroeni</option>
+                              <option>Menegaz</option>
+                              <option>Merro</option>
+                              <option>Migliori</option>
+                              <option>Oliboni</option>
+                              <option>Posenato</option>
+                              <option>Pravadelli</option>    
+                              <option>Quaglia</option>
+                              <option>Rizzi</option>
+                              <option>Sala</option> 
+                              <option>Segala</option>
+                              <option>Solitario</option>    
+                              <option>Spoto</option>                            
+                              <option>Villa</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+      
+
+      <div class="row">
+                <div class="col">
+                    <a class="button button-dark button-block button-outline" ng-click="startScan(settings)">
+                    <i class = "icon icon ion-play item-icon-center" >   </i>         
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="button button-dark button-block button-outline" ng-click="stopScan()">
+                    <i class = "icon icon ion-stop" >   </i>         
+                    </a>
+                </div>
+            </div>
+
+    <!--<div class="row" id="demo">
+        <div class="col ">
+            Path: {{settings.risultato}} <br>
+        </div>
+        
+    </div>-->
+
+
+    <div class="video-thumbnail" ng-model = "prova" ng-change = "replaceArrow(settings)" ng-change = "replace(top)" ng-change = "replacedest(settings.fine)" align="middle">    
+        <div class="icon0" id="icon0" ng-show="icon0">
+          <i class = "icon ion-arrow-up-c"> </i>
+        </div>
+        <div class="icon90" id="icon90" ng-show="icon90">
+          <i class = "icon ion-arrow-left-c"> </i>
+        </div>
+        <div class="icon180" id="icon180" ng-show="icon180">
+          <i class = "icon ion-arrow-down-c"> </i>
+        </div>
+        <div class="iconmin90" id="iconmin90" ng-show="iconmin90">
+          <i class = "icon ion-arrow-right-c"> </i>
+        </div>
+        <div class="icon45" id="icon45" ng-show="icon45">
+          <i class = "icon ion-arrow-graph-up-right"> </i>
+        </div>
+        <div class="icon135" id="icon135" ng-show="icon135">
+          <i class = "icon ion-arrow-graph-down-right"> </i>
+        </div>
+        <div class="iconmin45" id="iconmin45" ng-show="iconmin45">
+          <i class = "icon ion-arrow-graph-up-left"> </i>
+        </div>
+        <div class="iconmin135" id="iconmin135" ng-show="iconmin135">
+          <i class = "icon ion-arrow-graph-down-left"> </i>
+        </div>
+        <!--Wifi -->
+        <div class="video-thumbnailA" id="video-thumbnailA" ng-show="videothumbnailA">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailB" id="video-thumbnailB" ng-show="videothumbnailB">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailC" id="video-thumbnailC" ng-show="videothumbnailC">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailD" id="video-thumbnailD" ng-show="videothumbnailD">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailE" id="video-thumbnailE" ng-show="videothumbnailE">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailF" id="video-thumbnailF" ng-show="videothumbnailF">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailG" id="video-thumbnailG" ng-show="videothumbnailG">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailH" id="video-thumbnailH" ng-show="videothumbnailH">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailI" id="video-thumbnailI" ng-show="videothumbnailI">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailL" id="video-thumbnailL" ng-show="videothumbnailL">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+
+        <!-- beacon -->
+        <div class="video-thumbnailAb" id="video-thumbnailAb" ng-show="videothumbnailAb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailBb" id="video-thumbnailBb" ng-show="videothumbnailBb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailCb" id="video-thumbnailCb" ng-show="videothumbnailCb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailDb" id="video-thumbnailDb" ng-show="videothumbnailDb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailEb" id="video-thumbnailEb" ng-show="videothumbnailEb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailFb" id="video-thumbnailFb" ng-show="videothumbnailFb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailGb" id="video-thumbnailGb" ng-show="videothumbnailGb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailHb" id="video-thumbnailHb" ng-show="videothumbnailHb">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+
+
+
+        <div class="video-thumbnailAB" id="video-thumbnailAB" ng-show="videothumbnailAB">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailBC" id="video-thumbnailBC" ng-show="videothumbnailBC">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailCD" id="video-thumbnailCD" ng-show="videothumbnailCD">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailDE" id="video-thumbnailDE" ng-show="videothumbnailDE">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailEF" id="video-thumbnailEF" ng-show="videothumbnailEF">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailFG" id="video-thumbnailFG" ng-show="videothumbnailFG">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailGH" id="video-thumbnailGH" ng-show="videothumbnailGH">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailHI" id="video-thumbnailHI" ng-show="videothumbnailHI">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailIL" id="video-thumbnailIL" ng-show="videothumbnailIL">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+
+        <!-- Target -->
+        <div class="video-thumbnailcaffe" id="video-thumbnailcaffe" ng-show="videothumbnailcaffe">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailaulaL" id="video-thumbnailaulaL" ng-show="videothumbnailaulaL">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailaulaM" id="video-thumbnailaulaM" ng-show="videothumbnailaulaM">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail164B" id="video-thumbnail164B" ng-show="videothumbnail164B">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail164A" id="video-thumbnail164A" ng-show="videothumbnail164A">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail163B" id="video-thumbnail163B" ng-show="videothumbnail163B">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailferro" id="video-thumbnailferro" ng-show="videothumbnailferro">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailaltair2" id="video-thumbnailaltair2" ng-show="videothumbnailaltair2">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmastroeni" id="video-thumbnailmastroeni" ng-show="videothumbnailmastroeni">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmerro" id="video-thumbnailmerro" ng-show="videothumbnailmerro">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmenegaz" id="video-thumbnailmenegaz" ng-show="videothumbnailmenegaz">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailgiacobazzi" id="video-thumbnailgiacobazzi" ng-show="videothumbnailgiacobazzi">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailquaglia" id="video-thumbnailquaglia" ng-show="videothumbnailquaglia">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailbombieri" id="video-thumbnailbombieri" ng-show="videothumbnailbombieri">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnaildaducci" id="video-thumbnaildaducci" ng-show="videothumbnaildaducci">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnaildallapreda" id="video-thumbnaildallapreda" ng-show="videothumbnaildallapreda">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailaltair1" id="video-thumbnailaltair1" ng-show="videothumbnailaltair1">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailfummi" id="video-thumbnailfummi" ng-show="videothumbnailfummi">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailfiorini" id="video-thumbnailfiorini" ng-show="videothumbnailfiorini">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailsegala" id="video-thumbnailsegala" ng-show="videothumbnailsegala">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcristanimarco" id="video-thumbnailcristanimarco" ng-show="videothumbnailcristanimarco">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailpravadelli" id="video-thumbnailpravadelli" ng-show="videothumbnailpravadelli">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailbicego" id="video-thumbnailbicego" ng-show="videothumbnailbicego">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail169" id="video-thumbnail169" ng-show="videothumbnail169">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail170" id="video-thumbnail170" ng-show="videothumbnail170">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnail171" id="video-thumbnail171" ng-show="videothumbnail171">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailsala" id="video-thumbnailsala" ng-show="videothumbnailfranco">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailbonacina" id="video-thumbnailbonacina" ng-show="videothumbnailbonacina">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmasini" id="video-thumbnailmasini" ng-show="videothumbnailmasini">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmanca" id="video-thumbnailmanca" ng-show="videothumbnailmanca">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcastellani" id="video-thumbnailcastellani" ng-show="videothumbnailcastellani">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailmigliori" id="video-thumbnailmigliori" ng-show="videothumbnailmigliori">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailgiugno" id="video-thumbnailgiugno" ng-show="videothumbnailgiugno">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailposenato" id="video-thumbnailposenato" ng-show="videothumbnailposenato">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailgiachetti" id="video-thumbnailgiachetti" ng-show="videothumbnailgiachetti">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcristanimatteo" id="video-thumbnailcristanimatteo" ng-show="videothumbnailcristanimatteo">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailspoto" id="video-thumbnailspoto" ng-show="videothumbnailspoto">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcicalese" id="video-thumbnailcicalese" ng-show="videothumbnailcicalese">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailoliboni" id="video-thumbnailoliboni" ng-show="videothumbnailoliboni">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnaildipierro" id="video-thumbnaildipierro" ng-show="videothumbnaildipierro">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailfarinelli" id="video-thumbnailfarinelli" ng-show="videothumbnailfarinelli">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailbelussi" id="video-thumbnailbelussi" ng-show="videothumbnailbelussi">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcarra" id="video-thumbnailcarra" ng-show="videothumbnailcarra">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailrizzi" id="video-thumbnailrizzi" ng-show="videothumbnailrizzi">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailliptak" id="video-thumbnailliptak" ng-show="videothumbnailliptak">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailsolitario" id="video-thumbnailsolitario" ng-show="videothumbnailsolitario">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailvilla" id="video-thumbnailvilla" ng-show="videothumbnailvilla">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <div class="video-thumbnailcombi" id="video-thumbnailcombi" ng-show="videothumbnailcombi">
+            <i class = "icon ion-ios-location">   </i> 
+        </div>
+        <img src="img/cv2copia.png">
+
+    </div>
+
+</ion-content>
+</ion-view>
+</html>

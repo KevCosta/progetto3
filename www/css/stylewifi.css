@@ -1,0 +1,542 @@
+/* Empty. Add your own CSS if you like */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Freccie*/
+.icon0 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.icon90 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.icon180 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.iconmin90 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.icon45 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.icon135 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.iconmin45 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+
+.iconmin135 i{
+  position: absolute;
+  font-size: 100px;
+  top: calc(50% + 40px);
+  left: calc(50% - 25px);
+}
+.freccia {
+  position: relative;
+  display: inline-block;
+}
+/* Fine freccie */
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+}
+.video-thumbnail img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 90%;
+}
+.video-thumbnailA i {
+  position: absolute;
+  top: calc(50% + 95px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailB i{
+  position: absolute;
+  top: calc(50% + 35px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailC i{
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailD i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailE i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% + 38px);
+  color: black;
+}
+
+.video-thumbnailF i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% - 33px);
+}
+
+.video-thumbnailG i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailH i{
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailI i{
+  position: absolute;
+  top: calc(50% + 35px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailL i{
+  position: absolute;
+  top: calc(50% + 95px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailAB i {
+  position: absolute;
+  top: calc(50% + 65px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailBC i{
+  position: absolute;
+  top: calc(50% + 7.5px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailCD i{
+  position: absolute;
+  top: calc(50% - 62.5px);
+  left: calc(50% + 102px);
+}
+
+.video-thumbnailDE i{
+  position: absolute;
+  top: calc(50% - 105px);
+  left: calc(50% + 70px);
+}
+
+.video-thumbnailEF i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% + 2.5px);
+  color: black;
+}
+
+.video-thumbnailFG i{
+  position: absolute;
+  top: calc(50% - 115px);
+  left: calc(50% - 65px);
+}
+
+.video-thumbnailGH i{
+  position: absolute;
+  top: calc(50% - 62.5px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailHI i{
+  position: absolute;
+  top: calc(50% + 7.5px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailIL i{
+  position: absolute;
+  top: calc(50% + 65px);
+  left: calc(50% - 110px);
+}
+
+.video-thumbnailcaffe i{
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 2.5px);
+  color: yellow;
+}
+
+.video-thumbnailaulaL i{
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% + 9px);
+  color: yellow;
+}
+
+.video-thumbnailaulaM i{
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 12.5px);
+  color: yellow;
+}
+
+.video-thumbnail164B i{
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% + 75px);
+  color: yellow;
+}
+
+.video-thumbnail164A i{
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% + 103px);
+  color: yellow;
+}
+
+.video-thumbnail163B i{
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailferro i{
+  position: absolute;
+  top: calc(50% - 59px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailaltair2 i{
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailmastroeni i{
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailmerro i{
+  position: absolute;
+  top: calc(50% + 3.5px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailmenegaz i{
+  position: absolute;
+  top: calc(50% + 18px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailgiacobazzi i{
+  position: absolute;
+  top: calc(50% + 70px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailquaglia i{
+  position: absolute;
+  top: calc(50% + 79px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailbombieri i{
+  position: absolute;
+  top: calc(50% + 100px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnaildaducci i{
+  position: absolute;
+  top: calc(50% + 110px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnaildallapreda i{
+  position: absolute;
+  top: calc(50% + 110px);
+  left: calc(50% + 115px);
+  color: yellow;
+}
+
+.video-thumbnailaltair1 i{
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailfummi i{
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailfiorini i{
+  position: absolute;
+  top: calc(50% + 24px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailsegala i{
+  position: absolute;
+  top: calc(50% + 71px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailcristanimarco i{
+  position: absolute;
+  top: calc(50% + 80px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailpravadelli i{
+  position: absolute;
+  top: calc(50% + 101px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnailbicego i{
+  position: absolute;
+  top: calc(50% + 110px);
+  left: calc(50% + 90px);
+  color: yellow;
+}
+
+.video-thumbnail169 i{
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 88px);
+  color: yellow;
+}
+
+.video-thumbnail170 i{
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnail171 i{
+  position: absolute;
+  top: calc(50% - 112px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailsala i{
+  position: absolute;
+  top: calc(50% - 78px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailfranco i{
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailbonacina i{
+  position: absolute;
+  top: calc(50% - 70px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailmasini i{
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailmanca i{
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailcastellani i{
+  position: absolute;
+  top: calc(50% + 38px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailmigliori i{
+  position: absolute;
+  top: calc(50% + 38px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailgiugno i{
+  position: absolute;
+  top: calc(50% + 55px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailposenato i{
+  position: absolute;
+  top: calc(50% + 70px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailgiachetti i{
+  position: absolute;
+  top: calc(50% + 85px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailcristanimatteo i{
+  position: absolute;
+  top: calc(50% + 98px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailspoto i{
+  position: absolute;
+  top: calc(50% + 108px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailcicalese i{
+  position: absolute;
+  top: calc(50% + 128px);
+  left: calc(50% - 121px);
+  color: yellow;
+}
+
+.video-thumbnailoliboni i{
+  position: absolute;
+  top: calc(50% + 128px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnaildipierro i{
+  position: absolute;
+  top: calc(50% + 108px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailfarinelli i{
+  position: absolute;
+  top: calc(50% + 98px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailbelussi i{
+  position: absolute;
+  top: calc(50% + 85px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailcarra i{
+  position: absolute;
+  top: calc(50% + 70px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailrizzi i{
+  position: absolute;
+  top: calc(50% + 55px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailliptak i{
+  position: absolute;
+  top: calc(50% + 38px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailsolitario i{
+  position: absolute;
+  top: calc(50% + 38px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailvilla i{
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+.video-thumbnailcombi i{
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% - 100px);
+  color: yellow;
+}
+
+
+
+
