@@ -8,7 +8,7 @@
     "@ionic-native/facebook": "^3.10.3",
     "com.unarin.cordova.beacon": "git+https://github.com/petermetz/cordova-plugin-ibeacon.git",
     "cordova-android": "~6.3.0",
-    "cordova-ios": "^4.4.0",
+    "cordova-ios": "^5.0.1",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
